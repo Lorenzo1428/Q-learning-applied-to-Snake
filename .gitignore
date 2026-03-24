@@ -1,4 +1,6 @@
 *.png
 *.mat
 *.asv
+!snake.png
+!return5000.png
 prove.m
