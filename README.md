@@ -2,7 +2,7 @@
 
 Here's a MATLAB implementation of an AI agent applied to the classic game Snake. 
 
-![Snake Game](snake.png)
+![Snake Game](Asset/snake.png)
 
 ---
 
@@ -21,7 +21,7 @@ This equation aims at maximizing the Q-function, which depends on States and Act
 
 The training session is expected to show an improving behavior over time. The figure below shows a typical learning curve.
 
-![Learning Curve](return5000.png)
+![Learning Curve](Asset/return5000.png)
 
 ---
 
