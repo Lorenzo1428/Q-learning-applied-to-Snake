@@ -14,24 +14,24 @@ set(gcf,'units','normalized','outerposition',[0 0 1 1]);
 %img = imagesc(zeros(32));
 %colormap(map);
 global score match matches episodes record records;
-score = uicontrol("Style","text","String",'0',Position=[1330 776 80 30],ForegroundColor='red',FontSize=22);
-matches = uicontrol("Style","text","String",'0',Position=[1330 876 80 30],ForegroundColor='red',FontSize=22);
-episodes = uicontrol("Style","text","String",'0',Position=[1350 576 100 30],ForegroundColor='red',FontSize=22);
-records = uicontrol("Style","text","String",'0',Position=[1350 676 60 30],ForegroundColor='red',FontSize=22);
+matches = uicontrol("Style","text","String",'0',Units='normalized',Position=[0.8 0.7 0.1 0.1],ForegroundColor='red',FontSize=22);
+score = uicontrol("Style","text","String",'0',Units='normalized',Position=[0.8 0.6 0.1 0.1],ForegroundColor='red',FontSize=22);
+episodes = uicontrol("Style","text","String",'0',Units='normalized',Position=[0.8 0.5 0.1 0.1],ForegroundColor='red',FontSize=22);
+records = uicontrol("Style","text","String",'0',Units='normalized',Position=[0.8 0.4 0.1 0.1],ForegroundColor='red',FontSize=22);
  
-titleTxt = uicontrol("Style","text","String",'Snake',FontSize=35,Position=[200 920 150 55], ForegroundColor=[0 0.5 0],FontWeight='bold',FontAngle='italic');
-matchTxt = uicontrol("Style","text","String",'Partite:',FontSize=25,Position=[1200 850 150 60], ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
-counterTxt = uicontrol("Style","text","String",'Punti:',FontSize=25,Position=[1200 750 150 60], ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
-episodeTxt = uicontrol("Style","text","String",'Episodi:',FontSize=25,Position=[1200 550 150 60],ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
-recordTxt = uicontrol("Style","text","String",'Record:',FontSize=25,Position=[1200 650 150 60],ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
+titleTxt = uicontrol("Style","text","String",'Snake!',FontSize=35,Units='normalized',Position=[0.67 0.8 0.2 0.1], ForegroundColor=[0 0.5 0],FontWeight='bold',FontAngle='italic');
+matchTxt = uicontrol("Style","text","String",'Partite:',FontSize=25,Units='normalized',Position=[0.6 0.7 0.2 0.1], ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
+counterTxt = uicontrol("Style","text","String",'Punti:',FontSize=25,Units='normalized',Position=[0.6 0.6 0.2 0.1], ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
+episodeTxt = uicontrol("Style","text","String",'Episodi:',FontSize=25,Units='normalized',Position=[0.6 0.5 0.2 0.1],ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
+recordTxt = uicontrol("Style","text","String",'Record:',FontSize=25, Units='normalized',Position=[0.6 0.4 0.2 0.1],ForegroundColor=[0 0 0.5],FontWeight='bold',FontAngle='italic');
 
 
-B1 = uicontrol("Style","pushbutton",String='7',FontSize=20,Position=[1200,380,170,135]);
-B2 = uicontrol("Style","pushbutton",String='1000',FontSize=20,Position=[1200,240,170,135]);
-B3 = uicontrol("Style","pushbutton",String='5000',FontSize=20,Position=[1200,100,170,135]);
-B4 = uicontrol("Style","pushbutton",String='500',FontSize=20,Position=[1400,380,170,135]);
-B5 = uicontrol("Style","pushbutton",String='2500',FontSize=20,Position=[1400,240,170,135]);
-B6 = uicontrol("Style","pushbutton",String='10000',FontSize=20,Position=[1400,100,170,135]);
+B1 = uicontrol("Style","pushbutton",String='7',FontSize=20,Units='normalized',Position=[0.65 0.3 0.1 0.1]);
+B2 = uicontrol("Style","pushbutton",String='1000',FontSize=20,Units='normalized',Position=[0.65 0.2 0.1 0.1]);
+B3 = uicontrol("Style","pushbutton",String='5000',FontSize=20,Units='normalized',Position=[0.65 0.1 0.1 0.1]);
+B4 = uicontrol("Style","pushbutton",String='500',FontSize=20,Units='normalized',Position=[0.8 0.3 0.1 0.1]);
+B5 = uicontrol("Style","pushbutton",String='2500',FontSize=20,Units='normalized',Position=[0.8 0.2 0.1 0.1]);
+B6 = uicontrol("Style","pushbutton",String='10000',FontSize=20,Units='normalized',Position=[0.8 0.1 0.1 0.1]);
 
 B1.Callback = @playCallback;
 B2.Callback = @playCallback;
@@ -46,7 +46,7 @@ match = 0;
 
 function playCallback(src,event)
     global episodes matches;
-    Q = load(['save',src.String,'.mat']).Q;
+    Q = load(['Data/save',src.String,'.mat']).Q;
     episodes.String = src.String;
     %matches.String = '0';
     playGame(Q);

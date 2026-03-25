@@ -4,4 +4,10 @@
 *.kate-swp
 !snake.png
 !return5000.png
+!save7.mat
+!save500.mat
+!save1000.mat
+!save2500.mat
+!save5000.mat
+!save10000.mat
 prove.m
