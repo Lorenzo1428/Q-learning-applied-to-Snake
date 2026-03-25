@@ -38,7 +38,8 @@ The project is structured around four main scripts and classes:
 
 ## 🚀 How to Run
 
-1. **Train the agent:** Run the script `Learning.m` to train the agent using the learning parameters provided in the property fields.
+1. **Train the agent:** Run the script `Learning.m` to train the agent using the learning parameters provided in the property fields. The results are saved in a file called `save"NUMBER-OF-EPISODES".dat` which are stored in `Data` folder.
 2. **Test the results:**
    * Run the script `Game.m` to evaluate the result over a fixed number of episodes without the UI.
    * Run the script `GameUI.m` to watch a single episode play out with the UI.
+3. In `GameUI.m` there are a couple of pre-tested examples to test the game without preparing other .dat files.

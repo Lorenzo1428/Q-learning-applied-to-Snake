@@ -1,3 +1,4 @@
+%see line 78 to export .dat file
 clc
 clear
 close all
@@ -75,7 +76,7 @@ while episodes < imax
 end
 toc
 %exportgraphics(gca,['return', num2str(episodes),'.png'],"Resolution",300);
-%save(['save',num2str(episodes),'.mat'],'Q');
+%save(['Data/save',num2str(episodes),'.mat'],'Q');
 
 plot(exp_return); %questo per il grafico del return in funzione delle partite
 xlabel('episodes');
